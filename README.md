@@ -48,6 +48,10 @@ In a separate independent assignment alongside my Finance Director role, I led t
 
 **Hold the £42,600 run.** One £2,400 invoice is in the bank file twice and another supplier’s £2,400 invoice is missing. Both lists still contain 18 payments. [Inspect the two exceptions and rerun the check](demos/payment-run/README.md).
 
+## 5. Which variation value can finance support at month end?
+
+The site diary records 110 metres, but the October certificate covers only 100. A saved AI reading of the correspondence and a dated reconciliation show **£5,300** for finance review after prior billing. November’s approval adds £850. [Trace the figures back to the original words](demos/variation-review/README.md).
+
 ## How I work with your team
 
 We start with a real task. For a utilities contractor, I ran an in-person workshop for four office staff and managers using a completed job. A colleague subsequently costed jobs independently and I checked their figures.

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "I1",
+    "date": "2026-10-01",
+    "source": "instruction",
+    "text": "Please allow for up to 100 metres of extra duct at £80 per metre. This is the total allowance for V17."
+  },
+  {
+    "id": "I2",
+    "date": "2026-10-18",
+    "source": "instruction",
+    "text": "V17 revision 2 replaces the previous allowance in full. The revised total is 120 metres at £85 per metre, including work already done."
+  },
+  {
+    "id": "D1",
+    "date": "2026-10-30",
+    "source": "site diary",
+    "text": "The measured total for V17 to date is 110 metres. This includes the first 40 metres."
+  },
+  {
+    "id": "E1",
+    "date": "2026-10-31",
+    "source": "site email",
+    "text": "All 110 metres look fine to me. Please ask the commercial manager to certify the extra ten."
+  },
+  {
+    "id": "C1",
+    "date": "2026-10-31",
+    "source": "signed certificate",
+    "text": "I certify 100 metres cumulatively for V17 under revision 2. The remaining ten metres await inspection."
+  },
+  {
+    "id": "B1",
+    "date": "2026-10-22",
+    "source": "billing register",
+    "text": "V17 previously billed: £3,200 net. This figure is the cumulative amount billed to date."
+  },
+  {
+    "id": "C2",
+    "date": "2026-11-03",
+    "source": "signed certificate",
+    "text": "Inspection complete. I now certify 110 metres cumulatively for V17 under revision 2. This replaces the October certificate."
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "I1",
+    "quote": "Please allow for up to 100 metres of extra duct at £80 per metre. This is the total allowance for V17.",
+    "fields": {
+      "limit_m": 100,
+      "rate_gbp": 80
+    }
+  },
+  {
+    "id": "I2",
+    "quote": "V17 revision 2 replaces the previous allowance in full. The revised total is 120 metres at £85 per metre, including work already done.",
+    "fields": {
+      "limit_m": 120,
+      "rate_gbp": 85
+    }
+  },
+  {
+    "id": "D1",
+    "quote": "The measured total for V17 to date is 110 metres. This includes the first 40 metres.",
+    "fields": {
+      "measured_m": 110
+    }
+  },
+  {
+    "id": "C1",
+    "quote": "I certify 100 metres cumulatively for V17 under revision 2. The remaining ten metres await inspection.",
+    "fields": {
+      "certified_m": 100
+    }
+  },
+  {
+    "id": "B1",
+    "quote": "V17 previously billed: £3,200 net. This figure is the cumulative amount billed to date.",
+    "fields": {
+      "billed_gbp": 3200
+    }
+  },
+  {
+    "id": "C2",
+    "quote": "Inspection complete. I now certify 110 metres cumulatively for V17 under revision 2. This replaces the October certificate.",
+    "fields": {
+      "certified_m": 110
+    }
+  }
+]
