@@ -15,6 +15,8 @@ Both errors are for the same amount. Counting rows or adding up the pounds gives
 
 The sample assumes one GBP payment per approved supplier invoice and an export that retains both references. It uses fictional supplier IDs. A match confirms the listed references and amounts. Finance still checks beneficiary details and authorises the actual payment.
 
-**Possible extensions.** Some banks combine several invoices into one payment. For that workflow I’d retain the invoice allocation behind each bank line and reconcile both levels before release.
+**Try the more complex case.** Three transfers settle three invoices, but one invoice is split and another transfer combines invoices. Every invoice and bank transfer adds up, yet two remittance lines identify the wrong supplier. [Trace the £5,000 allocation schedule](allocations.md).
+
+**Possible extensions.** Compare beneficiary identifiers against a separately approved supplier master before release.
 
 [Back to the portfolio](../../README.md)
