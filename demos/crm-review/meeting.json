@@ -1,0 +1,24 @@
+{
+  "opportunity": "OP-17",
+  "stage": "Proposal sent",
+  "notes": [
+    {
+      "id": "N1",
+      "speaker": "Buyer",
+      "quote": "We’ll raise the PO once the board approves it."
+    },
+    {
+      "id": "N2",
+      "speaker": "Account manager",
+      "quote": "I’ll send the board pack on Friday."
+    }
+  ],
+  "candidate": {
+    "stage": "Won",
+    "stage_evidence": "N1",
+    "next_action": "Send the board pack on Friday.",
+    "owner": "Account manager",
+    "action_evidence": "N2"
+  },
+  "order_register": []
+}

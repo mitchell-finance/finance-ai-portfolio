@@ -1,0 +1,25 @@
+{
+  "customer": {
+    "ref": "RFQ-12",
+    "text": "We need the first four assemblies within six weeks. Please confirm the schedule for the other eight.",
+    "units": 12,
+    "first_batch": 4,
+    "weeks": 6
+  },
+  "costing": {
+    "ref": "EST-04",
+    "price": 48000,
+    "cost": 36000,
+    "deliveries": 1,
+    "extra_freight_each": 350
+  },
+  "draft": {
+    "ref": "Q-17",
+    "price": 48000,
+    "units": 12,
+    "promised_first_batch": 12,
+    "weeks": 6,
+    "deliveries": 3,
+    "text": "We will deliver all twelve assemblies within six weeks. Three deliveries are included in the price."
+  }
+}

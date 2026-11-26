@@ -1,0 +1,20 @@
+{
+  "contract": 60000,
+  "previous_forecast": 50000,
+  "previous_allowance": {
+    "weeks": 4,
+    "weekly_rate": 1000
+  },
+  "revised_quote": {
+    "weeks": 6,
+    "weekly_rate": 1100
+  },
+  "ledger": [
+    {
+      "ref": "AC-31",
+      "description": "Week 1 of revised hire; included in actual costs",
+      "amount": 1100
+    }
+  ],
+  "programme": "Completion has moved back two weeks. The revised hire rate applies to all six weeks, including week one."
+}

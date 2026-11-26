@@ -55,6 +55,12 @@ I led the migration on the client side, with 4PS as implementation partner. I ch
 
 The site diary records 110 metres, but the October certificate covers only 100. I compare the quantities in the correspondence with the signed certificate and deduct prior billing. That leaves **£5,300** for finance review. November’s approval adds £850. [Trace the figures back to the original words](demos/variation-review/README.md).
 
+## Three more decisions for commercial and operations teams
+
+- **Can sales issue this £48,000 proposal?** The buyer requested four assemblies by week six. The draft promises twelve and includes £700 of extra freight. [Compare the wording before and after review](demos/proposal-review/README.md).
+- **How much does a two-week delay add to final cost?** I replace the old plant allowance and check the accrual. The margin falls by £2,600, even though £5,500 of hire remains to be recognised. [Follow the forecast bridge](demos/cost-to-complete/README.md).
+- **Does a promised PO mean we’ve won the work?** Board approval is still pending. I keep the deal open and give the account manager a specific follow-up task. [Review the proposed CRM update](demos/crm-review/README.md).
+
 ## How I work with your team
 
 We start with a real task. For a utilities contractor, I ran an in-person workshop for four office staff and managers using a completed job. A colleague subsequently costed jobs independently and I checked their figures.

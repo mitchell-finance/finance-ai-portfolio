@@ -1,0 +1,4 @@
+Hold proposed move to Won | current stage: Proposal sent
+Buyer: We’ll raise the PO once the board approves it.
+Task for review: Account manager | Send the board pack on Friday.
+Evidence: I’ll send the board pack on Friday.
