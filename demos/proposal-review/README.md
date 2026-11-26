@@ -20,3 +20,5 @@ I built this example with a sample manufacturing enquiry. A buyer wants 12 assem
 [Read the actual program output](expected-output.txt)
 
 [Back to my portfolio](../../README.md)
+
+[Advanced case: carry terms forward across partial amendments](amendments.md).

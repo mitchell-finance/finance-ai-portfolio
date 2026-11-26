@@ -17,3 +17,5 @@ There is still a useful update to make. I’d propose a task for the account man
 [Read the actual program output](expected-output.txt)
 
 [Back to my portfolio](../../README.md)
+
+[Advanced case: reconcile partial orders, late revisions and repeated events](order-events.md).
