@@ -1,18 +1,33 @@
 """Compare signed GBP balances. Positive differences mean more in the opening export."""
 import csv
 from collections import defaultdict
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 
-def balances(filename, mapping=None):
+def balances(filename, mapping=None, *, expected_rows=None):
     totals = defaultdict(Decimal)
-    with Path(__file__).with_name(filename).open(newline="") as stream:
-        for row in csv.DictReader(stream):
+    count = 0
+    with (Path(__file__).parent / filename).open(newline="") as stream:
+        reader = csv.DictReader(stream)
+        if reader.fieldnames != ["account", "project", "amount_gbp"]:
+            raise ValueError("Unexpected export columns")
+        for row in reader:
+            count += 1
             project = row["project"]
             if mapping is not None:
                 project = mapping[project]  # An unknown code stops the comparison.
-            totals[row["account"], project] += Decimal(row["amount_gbp"])
+            if None in row or not project or not (row["account"] or "").strip():
+                raise ValueError("Missing identifiers or unexpected export columns")
+            try:
+                amount = Decimal(row["amount_gbp"])
+            except (InvalidOperation, TypeError) as error:
+                raise ValueError("Invalid GBP balance") from error
+            if not amount.is_finite() or amount != amount.quantize(Decimal("0.01")):
+                raise ValueError("Expected a finite balance in whole pence")
+            totals[row["account"], project] += amount
+    if not count or (expected_rows is not None and count != expected_rows):
+        raise ValueError(f"Incomplete export {Path(filename).name}: received {count} rows")
     return totals
 
 
@@ -33,9 +48,9 @@ def differences(closing, opening):
 
 
 def run():
-    closing = balances("xero.csv")
+    closing = balances("xero.csv", expected_rows=3)
     mapping = {"N01":"North", "S01":"South", "N07":"South", "HQ":"Central"}
-    opening = balances("business-central.csv", mapping)
+    opening = balances("business-central.csv", mapping, expected_rows=4)
     print(f"Signed ledger total | closing {sum(closing.values()):,.2f} | opening {sum(opening.values()):,.2f} GBP")
     for account, amount in sorted(by_account(closing).items()):
         print(f"Account {account} | closing {amount:,.2f} | opening {by_account(opening)[account]:,.2f}")
@@ -43,7 +58,7 @@ def run():
         print(f"HOLD | {account} | {project} | opening less closing {delta:+,.2f} GBP")
     print("Finance checks the fictional project register: N07 belongs to North. Correct comparison mapping.")
     mapping["N07"] = "North"
-    rerun = balances("business-central.csv", mapping)
+    rerun = balances("business-central.csv", mapping, expected_rows=4)
     if differences(closing, rerun):
         raise ValueError("Project balances still differ")
     print("PASS | closing and opening agree by account and project.")

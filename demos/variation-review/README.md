@@ -22,8 +22,10 @@ The Python replay checks citations, source types, missing records and the cut-of
 
 **Client work I delivered.** I worked with the quantity surveyor and directors to reconcile project costs and explain differences in the management accounts.
 
-**What you can run here.** From this folder, run `python review.py` and `python -m unittest -v` (Python 3.10+). The replay uses the saved extraction offline. Try changing the prior-billing record and its matching extraction to £8,500 and rerunning the November check. This example assumes one job, a retrospectively applicable revised rate, cumulative snapshots and one authorised source per record type. Finance owns release. Revenue recognition, VAT, retention and contractual entitlement require separate assessment.
+**What you can run here.** From this folder, run `python review.py` and `python -m unittest -v` (Python 3.10+). The replay uses the saved extraction offline. Try changing the prior-billing record, its saved quotation and its extracted amount to £8,500 and rerunning the November check. This example assumes one job, a retrospectively applicable revised rate, cumulative snapshots and one authorised source per record type. Finance owns release. Revenue recognition, VAT, retention and contractual entitlement require separate assessment.
 
 **Possible extensions.** For a pilot, give a model a previously unseen variation pack and compare its extracted values and evidence against a quantity surveyor’s independent review. Measure missed revisions, unsupported approvals and the value of differences before considering integration.
+
+I also check the extracted certified quantity against the signed V17 certificate wording used in this pack. Changing October from 100 to 110 metres leaves the quotation intact but blocks the £850 overstatement. Unrecognised certificate wording requires manual review.
 
 [Back to the portfolio](../../README.md)

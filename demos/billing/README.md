@@ -21,4 +21,6 @@ I trace S13 back to the original job reference. Once the office confirms it, the
 
 **Possible extensions.** A job billed in stages needs a check by valuation and invoice line. Two reports on one job are held for review in this example.
 
+If a £750 job has a £1 authorised invoice, I hold the £749 difference for finance. An overbill or a draft alongside the posted invoice also needs investigation before another invoice is prepared.
+
 [Back to the portfolio](../../README.md)

@@ -15,4 +15,6 @@ The new invoice is for 36 units. It initially matches. After reinspection it exc
 
 Run `python receipt_review.py` and `python -m unittest -v` from this directory. Inspection revisions are cumulative and can arrive out of order. The public replay covers one line, assumes the recorded order price and takes prior billed quantity as an input. It demonstrates the decision using newly written code. Finance retains authority to release the invoice.
 
+I require a positive whole-number revision on both the order and approval. If either reference is missing, I hold the invoice even when the quantities agree.
+
 [Back to my portfolio](../../README.md)

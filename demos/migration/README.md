@@ -17,7 +17,9 @@ I check the project register and correct N07 in the comparison mapping. The reru
 
 **What you can run here.** Run `python migration.py` and `python -m unittest -v` from this folder. Inspect the [closing export](xero.csv), [opening export](business-central.csv) and [actual output](expected-output.txt). Amounts are signed GBP for one cutover date. The example reads both exports locally.
 
-**Possible extensions.** A separate bank-export check could compare the payment count and value to the approved run before anyone releases the file.
+I also compare the proposed bank file with the approved payment run before release. [See the payment example where the count and value agree but two invoice references are wrong](../payment-run/README.md).
+
+For this cutover I expect three closing rows and four opening rows from the sample export controls. An empty or short file stops the comparison. Row counts alone cannot detect substituted transactions; the source-line walkthrough covers that separate check.
 
 [Back to the portfolio](../../README.md)
 

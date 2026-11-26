@@ -12,7 +12,7 @@ I’ve used five sample invoices for this call. The first balance check is dated
 
 | Invoice | Outstanding | What to do |
 | --- | ---: | --- |
-| DEMO-101 | £1,200.00 | Raise on the call; overdue since 14 November. |
+| DEMO-101 | £1,200.00 | Raise on the call; due on 14 November and now overdue. |
 | DEMO-102 | £800.00 | Refer to an office colleague: the agreed quantity is disputed. Check the signed job record with the account manager before chasing. |
 | DEMO-103 | £0.00 | Already paid. No reminder. |
 | DEMO-104 | £450.00 | Factored. Check with the invoice-finance provider before contacting the customer about payment. |

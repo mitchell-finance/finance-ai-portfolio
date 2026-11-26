@@ -1,5 +1,7 @@
-"""Independent replay of one order line. Quantities are units, prices are integer pence."""
+"""Independent replay of one order line. Quantities are whole units."""
 def review(order_revision, approved_revision, received, inspections, billed, invoice):
+    if any(type(v) is not int or v < 0 for v in (received, billed, invoice)) or invoice == 0:
+        return "HOLD: check receipt, prior billing and invoice quantities", 0
     if not inspections:
         raise ValueError("Missing inspection")
     current = {}
@@ -10,9 +12,11 @@ def review(order_revision, approved_revision, received, inspections, billed, inv
             raise ValueError("Conflicting inspection revision")
         current[version] = accepted
     accepted = current[max(current)]
+    if any(type(v) is not int or v < 1 for v in (order_revision, approved_revision)):
+        return "HOLD: missing or invalid order or approval revision", 0
     if order_revision != approved_revision:
         return "HOLD: obtain approval for this order revision", 0
-    if min(billed, invoice) < 0 or billed > accepted:
+    if billed > accepted:
         return "HOLD: reconcile prior billing and accepted quantity", 0
     available = accepted - billed
     return ("HOLD: invoice exceeds remaining accepted units" if invoice > available

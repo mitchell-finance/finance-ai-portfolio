@@ -13,7 +13,7 @@ I use sample figures to show how I’d explain a late supplier invoice. The boar
 
 ### Handover for the finance colleague preparing the pack
 
-1. On Windows with Python 3 installed, double-click **Review October.cmd** in the downloaded example. Select **1** to use the 24 October export. Its £132,000 total looks right, but it ends a week early. The report holds.
+1. On Windows with Python 3.10 or later installed, double-click **Review October.cmd** in the downloaded example. Select **1** to use the 24 October export. Its £132,000 total looks right, but it ends a week early. The report holds.
 2. Obtain the export through **31 October**. Run the launcher again and select **2** to use that file. In live work, confirm the reporting period and completeness at source.
 3. Compare the [issued figures](issued.json) and [invoice](invoice.json). Confirm that J17 / W8 represents the same work, then check the £2,400 movement. Keep the issued pack and send the proposed bridge to the finance director for a decision.
 

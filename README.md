@@ -13,7 +13,11 @@ I use sample records and figures throughout the walkthroughs so you can follow t
 
 - **Credit control.** A £500 receipt lands between preparing a £1,200 chaser and calling the customer. I block the old draft and put £700 back to finance for review. [See the call list and both drafts](demos/credit-control/README.md).
 - **Xero to Business Central.** Every project total agrees, but split postings have moved cost between labour and materials. I trace the postings back to their source lines before signing off. [Follow the migration reconciliation](demos/migration/lineage.md).
-- **Construction variations.** Site measured 110 metres and the certificate covers 100. I trace the £5,300 October valuation to its evidence and catch a £95 extraction against an £85 instruction. [Inspect the certificate, rate and prior billing](demos/variation-review/README.md).
+- **Payment reconciliation.** The bank file contains 18 payments totalling £42,600, exactly as approved. I hold it because one £2,400 invoice appears twice and another is missing. [Compare the payment file](demos/payment-run/README.md) or [trace split payments by beneficiary](demos/payment-run/allocations.md).
+
+## Where I use AI
+
+I built a Claude workflow to prepare credit-control call lists from Xero and draft Outlook chasers for finance to review. In the public [contract review pilot](demos/contract-review/README.md), you can inspect the actual model response: it selected five supported rates and referred three unresolved files in one eight-case exercise. For commercial teams, the [proposal](demos/proposal-review/README.md) and [CRM](demos/crm-review/README.md) examples show the checks I would apply before a suggested change reaches a customer or a sales forecast.
 
 ## Working with a team
 
@@ -27,6 +31,7 @@ For a utilities contractor, I ran an in-person workshop with four office staff a
 | Clean supplier data before migration or integration | [Duplicate names, conflicting identifiers and bank changes](demos/data-cleaning/README.md) |
 | Reconcile finance and operational records | [Unbilled jobs](demos/billing/README.md) · [Split payment allocations](demos/payment-run/allocations.md) |
 | Automate routine work with human review | [Credit-control call list](demos/credit-control/README.md) · [AI extraction for month-end variations](demos/variation-review/README.md) |
+| Recover a missed import and confirm the records agree | [Find the missing £825 invoice and replay it safely](demos/import-recovery/README.md) |
 | Connect purchasing, receiving and accounts payable | [Aperture: approval revisions and corrected receipts](demos/aperture/README.md) |
 | Replace a period-end report with a decision about cash | [Can Friday’s supplier run be funded?](demos/cash-reporting/README.md) |
 | Explain a change to an issued board pack | [Trace an £8,400 late invoice to a £2,400 profit movement](demos/month-end/README.md) |

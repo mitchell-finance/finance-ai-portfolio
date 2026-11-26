@@ -5,8 +5,19 @@ from datetime import date
 from pathlib import Path
 
 HERE = Path(__file__).parent
-SCHEMA = {"instruction": {"limit_m", "rate_gbp"}, "signed certificate": {"certified_m"},
-          "site diary": {"measured_m"}, "billing register": {"billed_gbp"}}
+# These patterns describe the sample document formats. Unknown wording goes to review.
+FORMATS = {
+    "instruction": {
+        "limit_m": (r"(?:up to|revised total is) ([0-9]+) metres\b", "instruction ceiling"),
+        "rate_gbp": (r"£([0-9]+) per metre\b", "extracted rate"),
+    },
+    "signed certificate": {
+        "certified_m": (r"(?:^|[.!?]\s+)I (?:now )?certify ([0-9]+) metres cumulatively for V17\b",
+                        "certified quantity"),
+    },
+    "site diary": {"measured_m": (r"measured total for V17 to date is ([0-9]+) metres\b", "measured quantity")},
+    "billing register": {"billed_gbp": (r"V17 previously billed: £(\d{1,3}(?:,\d{3})+|\d+) net\b", "prior billing")},
+}
 
 
 def load(name):
@@ -23,31 +34,35 @@ def assess(documents, claims, cutoff):
     for claim in claims:
         ref = claim["id"]
         doc = evidence.get(ref)
-        if ref in seen or doc is None or not claim["quote"] or claim["quote"] not in doc["text"]:
+        if doc is None:
+            raise ValueError(f"Check citation {ref}")
+        day = date.fromisoformat(doc["date"])
+        if day > cutoff:
+            continue
+        if ref in seen or not claim["quote"] or claim["quote"] not in doc["text"]:
             raise ValueError(f"Check citation {ref}")
         seen.add(ref)
         source, fields = doc["source"], claim["fields"]
-        if source not in SCHEMA or set(fields) != SCHEMA[source]:
+        if source not in FORMATS or fields.keys() != FORMATS[source].keys():
             raise ValueError(f"Source cannot support these fields: {ref}")
         if any(type(v) is not int or v < 0 for v in fields.values()):
             raise ValueError(f"Check units or values: {ref}")
-        if source == "instruction":
-            rates = re.findall(r"£([0-9]+) per metre\b", doc["text"])
-            if len(rates) != 1 or int(rates[0]) != fields["rate_gbp"]:
-                raise ValueError(f"{ref}: verify the extracted rate against the instruction")
-        day = date.fromisoformat(doc["date"])
-        if day <= cutoff:
-            key = (source, day)
-            if key in latest:
-                raise ValueError(f"Resolve conflicting same-day evidence: {source}")
-            latest[key] = (ref, fields)
+        for field, (pattern, label) in FORMATS[source].items():
+            matches = re.findall(pattern, doc["text"])
+            quoted = re.findall(pattern, claim["quote"])
+            if len(matches) != 1 or quoted != matches or int(matches[0].replace(",", "")) != fields[field]:
+                raise ValueError(f"{ref}: verify the {label} against the {source}")
+        key = (source, day)
+        if key in latest:
+            raise ValueError(f"Resolve conflicting same-day evidence: {source}")
+        latest[key] = (ref, fields)
     for ref, doc in evidence.items():
-        if doc["source"] in SCHEMA and date.fromisoformat(doc["date"]) <= cutoff and ref not in seen:
+        if doc["source"] in FORMATS and date.fromisoformat(doc["date"]) <= cutoff and ref not in seen:
             raise ValueError(f"Missing extraction for {ref}")
     chosen = {}
     for (source, day), record in sorted(latest.items()):
         chosen[source] = record
-    if set(chosen) != set(SCHEMA):
+    if set(chosen) != set(FORMATS):
         raise ValueError("Incomplete evidence at cut-off")
     values = {k:v for _, fields in chosen.values() for k,v in fields.items()}
     measured, certified = values["measured_m"], values["certified_m"]

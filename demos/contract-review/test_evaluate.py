@@ -27,4 +27,5 @@ class ScoreTests(unittest.TestCase):
         reference = load(HERE / "reference.json")
         results = score(load(HERE / "observed.json"), reference,
                         (HERE / "prompt.txt").read_text(encoding="utf-8"))
-        self.assertEqual(len(results), len(reference))
+        self.assertEqual(len(results), 8)
+        self.assertTrue(all(decision and evidence and not unsafe for _, decision, evidence, unsafe in results))

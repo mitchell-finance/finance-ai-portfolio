@@ -36,3 +36,23 @@ class VariationTests(unittest.TestCase):
         self.claims[0]["quote"] = "The full amount is approved."
         with self.assertRaisesRegex(ValueError, "citation"):
             self.check()
+
+    def test_site_measure_cannot_replace_certified_quantity(self):
+        certificate = next(c for c in self.claims if c["id"] == "C1")
+        certificate["fields"]["certified_m"] = 110
+        with self.assertRaisesRegex(ValueError, "C1: verify the certified quantity"):
+            self.check()
+
+    def test_other_extracted_values_must_agree_with_their_sources(self):
+        for ref, field in (("I2", "limit_m"), ("D1", "measured_m"), ("B1", "billed_gbp")):
+            with self.subTest(ref=ref):
+                self.claims = load("interpretation.json")
+                next(row for row in self.claims if row["id"] == ref)["fields"][field] += 1
+                with self.assertRaisesRegex(ValueError, ref):
+                    self.check()
+
+    def test_later_bad_certificate_cannot_change_issued_october_result(self):
+        next(c for c in self.claims if c["id"] == "C2")["fields"]["certified_m"] = 109
+        self.assertEqual(self.check()[:2], (5300, 10))
+        with self.assertRaisesRegex(ValueError, "C2"):
+            self.check("2026-11-03")

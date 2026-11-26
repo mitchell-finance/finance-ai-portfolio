@@ -151,7 +151,7 @@ def review_customer(snapshot, customer_id, now, *, freshness_limit=timedelta(min
         elif due >= review_date:
             action, explanation = "NOT OVERDUE", f"Due {due:%d %b %Y}; no overdue payment request."
         else:
-            action, explanation = "RAISE ON CALL", f"Overdue since {due:%d %b %Y}."
+            action, explanation = "RAISE ON CALL", f"Due {due:%d %b %Y}; now overdue."
             eligible.append((invoice["reference"], balance))
         decisions.append(Decision(invoice["reference"], balance, action, explanation))
     total = sum(amount for _, amount in eligible)

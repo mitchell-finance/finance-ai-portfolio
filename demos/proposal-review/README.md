@@ -1,6 +1,6 @@
 # The price agrees. What have we promised?
 
-I built this example with a sample manufacturing enquiry. A buyer wants 12 assemblies for £48,000. Sales has used the approved price. I’d still hold the proposal.
+I built this example with a sample manufacturing enquiry. A buyer has requested 12 assemblies. Sales has quoted the £48,000 price in the approved costing. I’d still hold the proposal.
 
 **Draft:** “We will deliver all twelve assemblies within six weeks. Three deliveries are included in the price.”
 

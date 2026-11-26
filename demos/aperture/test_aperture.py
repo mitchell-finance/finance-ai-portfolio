@@ -14,3 +14,12 @@ class ReceiptChecks(unittest.TestCase):
 
     def test_correction_below_prior_billing_is_an_exception(self):
         self.assertIn("prior billing",review(3,3,60,[(2,10)],12,12)[0])
+
+    def test_revision_must_exist_on_both_records(self):
+        for revision in (None, "", 0, -1, True):
+            with self.subTest(revision=revision):
+                self.assertIn("HOLD", review(revision, revision, 60, [(1, 48)], 12, 36)[0])
+
+    def test_quantities_must_be_whole_units_and_invoice_positive(self):
+        for invoice in (True, 0, 1.5):
+            self.assertIn("HOLD", review(3, 3, 60, [(1, 48)], 12, invoice)[0])

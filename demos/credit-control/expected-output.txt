@@ -6,7 +6,7 @@ Demo freshness limit: 10 minutes; recheck before using a draft.
 Raise on the call: DEMO-101, £1,200.00
 
 DEMO-101 | £1,200.00 outstanding | RAISE ON CALL
-  Overdue since 14 Nov 2026.
+  Due 14 Nov 2026; now overdue.
 DEMO-102 | £800.00 outstanding | COLLEAGUE ACTION
   Customer queries the agreed quantity. Office colleague checks the signed job record with the account manager.
 DEMO-103 | £0.00 outstanding | PAID

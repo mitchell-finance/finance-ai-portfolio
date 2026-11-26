@@ -7,7 +7,14 @@ from pathlib import Path
 def assess(job, reports, invoices):
     ref, state, value = job
     bills = [b for b in invoices if b[1] == ref]
-    if any(b[2] == "AUTHORISED" for b in bills):
+    if len(bills) > 1:
+        return "Hold | check duplicate records or split billing with finance"
+    if bills and bills[0][2] == "AUTHORISED":
+        amount = bills[0][3]
+        if type(amount) is not int or amount < 0:
+            return "Hold | check authorised invoice amount"
+        if amount != value:
+            return f"Hold | finance to reconcile job less authorised invoice: GBP {value - amount:+,}"
         return "Already invoiced | skip billing"
     if state != "complete":
         return "Hold | job incomplete"
@@ -17,7 +24,7 @@ def assess(job, reports, invoices):
     if any(r["original"] != r["filed"] for r in evidence):
         return "Hold | conflicting job references on " + ", ".join(
             r["id"] for r in evidence if r["original"] != r["filed"])
-    if len(evidence) != 1 or len(bills) > 1:
+    if len(evidence) != 1:
         return "Hold | check duplicate records"
     if not bills:
         return "Ready to prepare a draft | supporting report " + evidence[0]["id"]
