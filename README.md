@@ -40,7 +40,7 @@ I connected Claude to construction software to identify unbilled work. At a util
 
 **“The trial balance agrees. Are we actually ready to switch?”**
 
-In a separate independent assignment alongside my Finance Director role, I led the client-side migration with 4PS as implementation partner, reconciling by account and project before authorising finance cutover.
+I led the migration on the client side, with 4PS as implementation partner. I checked the opening balances and the bank export before authorising finance cutover.
 
 **Worked result:** Account 5100 agrees at £3,000, but North is £300 short and South £300 high. Hold sign-off until the project mapping is corrected and the check rerun. [Inspect the reconciliation and sign-off](demos/migration/README.md).
 

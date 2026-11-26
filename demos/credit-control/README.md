@@ -40,7 +40,7 @@ This is the practical control: a draft based on an earlier balance cannot pass t
 
 ## Client work I delivered
 
-I built a Claude credit-control agent that reads overdue invoices from Xero, prepares a call list, separates factored accounts and drafts chasers in Outlook for finance to review. I led a company-wide AI rollout while Finance Director at a construction business turning over approximately £30m.
+I built a Claude credit-control agent that reads overdue invoices from Xero, prepares a call list, separates factored accounts and drafts chasers in Outlook for finance to review. I led a company-wide AI rollout for a construction business turning over about £30m.
 
 The useful result is a clear next action with the exceptions visible. The person responsible for the customer or the money retains the decision.
 

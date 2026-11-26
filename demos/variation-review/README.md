@@ -20,7 +20,7 @@ Read the [seven fictional source records](evidence.json), then inspect the [save
 
 The Python replay checks citations, source types, missing records and the cut-off before applying the agreed arithmetic. A quotation can be authentic while a number extracted from it is wrong. The reviewer must check those numbers against the originals before relying on the result. The fixtures are illustrative and do not measure model accuracy on unseen documents.
 
-**Client work I delivered.** In my Finance Director role I worked with the quantity surveyor and directors to reconcile project costs and explain differences in the management accounts. This variation review is a newly built portfolio demonstration.
+**Client work I delivered.** I worked with the quantity surveyor and directors to reconcile project costs and explain differences in the management accounts. This variation review is a newly built portfolio demonstration.
 
 **What you can run here.** From this folder, run `python review.py` and `python -m unittest -v` (Python 3.10+). The replay uses the saved extraction offline. Try changing the prior-billing record and its matching extraction to £8,500 and rerunning the November check. This example assumes one job, a retrospectively applicable revised rate, cumulative snapshots and one authorised source per record type. Finance owns release. Revenue recognition, VAT, retention and contractual entitlement require separate assessment.
 

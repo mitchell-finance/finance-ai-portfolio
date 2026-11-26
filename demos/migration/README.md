@@ -11,7 +11,7 @@ The finance reviewer checks the project register and corrects N07 in the compari
 
 **Illustrative sign-off record.** The closing and opening balances agree by account and project after correction. The client finance lead would authorise cutover once the other agreed tests pass. This single check clears the project reconciliation only.
 
-**Client work I delivered.** In a separate independent assignment alongside my Finance Director role, I led the client-side Xero-to-Business Central finance migration with 4PS as implementation partner. I reconciled by account and project, tested the bank export against the approved payment count and value, and authorised finance cutover. Finance went live in the planned quarter, with around 50 system users across the business.
+**Client work I delivered.** On an independent migration assignment, I led the client-side Xero-to-Business Central finance migration with 4PS as implementation partner. I reconciled by account and project, tested the bank export against the approved payment count and value, and authorised finance cutover. Finance went live in the planned quarter, with around 50 system users across the business.
 
 **What you can run here.** Run `python migration.py` and `python -m unittest -v` from this folder. Inspect the fictional [closing export](xero.csv), [opening export](business-central.csv) and [actual output](expected-output.txt). Amounts are signed GBP for one cutover date. The example reads both exports locally.
 
