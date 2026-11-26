@@ -1,5 +1,7 @@
 # Which completed jobs are still waiting to be billed?
 
+I’ve used sample job records to show how I trace completed work from the signed shift report to the invoice draft.
+
 **J103 is worth £750. The draft invoice already exists, but its supporting shift report is sitting on J104, a job that has already been invoiced.** Looking only for a draft would release it too soon. Looking only for a missing report could send someone back to site to recreate evidence the office already has.
 
 | Job | First check | Office or finance decision |
@@ -13,7 +15,7 @@ I trace S13 back to the original job reference. Once the office confirms it, the
 
 **Client work I delivered.** I connected Claude to construction software to identify completed work awaiting billing. For a utilities contractor, Claude helped identify a shift report filed against the wrong job. The office corrected the reference and finance checked the draft.
 
-**What you can run here.** From this folder run `python billing.py`, then `python -m unittest -v`. The [fictional records](jobs.json) represent one fixed-price job per invoice with one required shift report. The correction is replayed in memory. Finance retains release authority. [Read the actual output](expected-output.txt).
+**What you can run here.** From this folder run `python billing.py`, then `python -m unittest -v`. The [job records](jobs.json) represent one fixed-price job per invoice with one required shift report. The correction is replayed in memory. Finance retains release authority. [Read the actual output](expected-output.txt).
 
 **What if the office retries after a timeout?** Run `python retry_example.py`. A separate in-memory example saves a draft, then simulates a lost acknowledgement. On retry the same company and batch reference returns the existing draft. One draft awaits review. [Inspect the retry example](retry_example.py).
 

@@ -8,7 +8,7 @@
 
 For **Example Works Ltd**, raise **DEMO-101 for £1,200.00**. Refer the disputed £800.00 to an office colleague. Do not put the paid, factored or not-yet-due invoices in the reminder.
 
-These are fictional records checked at **09:00 GMT on 26 November 2026**. The timestamp describes the sample, not a live connection or a check of today’s accounts.
+I’ve used five sample invoices for this call. The first balance check is dated **26 November 2026 at 09:00 GMT**.
 
 | Invoice | Outstanding | What to do |
 | --- | ---: | --- |
@@ -26,7 +26,7 @@ The first draft asks about DEMO-101 only. It excludes the disputed amount and al
 
 > Hello, could you confirm when we can expect payment of £1,200.00 for invoice DEMO-101? Thank you.
 
-At **09:04**, a **£500.00** payment is allocated to DEMO-101 in the fictional records. At **09:06**, finance checks again:
+At **09:04**, a **£500.00** payment is allocated to DEMO-101. At **09:06**, finance checks again:
 
 1. The original £1,200.00 draft fails the record check.
 2. A new review reduces DEMO-101 to **£700.00**.
@@ -46,7 +46,7 @@ The useful result is a clear next action with the exceptions visible. The person
 
 ## What you can run here
 
-I use five fictional invoices to show the rules behind my call list. It groups the result by customer, explains each exclusion, prepares draft text and checks whether an earlier review still matches the latest supplied records.
+My call list groups the result by customer, explains each exclusion, prepares draft text and checks whether an earlier review still matches the latest supplied records.
 
 It runs locally with **Python 3.10 or later** and the standard library. No installation of packages, credentials or network connection is needed. From the repository folder:
 

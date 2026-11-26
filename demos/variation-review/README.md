@@ -1,6 +1,6 @@
 # The site says 110 metres are finished. How much can I put forward this month?
 
-A fictional customer orders extra ducting on job V17. Six records and a site email tell different parts of the story. The original allowance was 100 metres at £80. A revised instruction replaces it with **120 metres in total at £85**. The site diary records 110 metres installed. On 31 October, the commercial manager has certified 100.
+I built this example using sample correspondence for an order of extra ducting on job V17. I’d start by comparing the instruction, the site diary and the signed certificate. The original allowance was 100 metres at £80. A revised instruction replaces it with **120 metres in total at £85**. The site diary records 110 metres installed. On 31 October, the commercial manager has certified 100.
 
 | At 31 October | Net value |
 | --- | ---: |
@@ -12,15 +12,15 @@ A fictional customer orders extra ducting on job V17. Six records and a site ema
 
 The £3,200 is an amount already invoiced. Deducting the first 40 metres at today's £85 rate would deduct £200 too much. A second trap is the site email saying all 110 metres “look fine”. The signed certificate explicitly leaves ten metres awaiting inspection.
 
-**What changes on 3 November?** A new signed certificate clears the ten metres. With prior billing still at £3,200 in the sample, the amount available for review becomes £6,150. That is an £850 increase. If October’s £5,300 had since been invoiced, finance would first update the billing register and only £850 would remain.
+**What changes on 3 November?** A new signed certificate clears the ten metres. With prior billing still at £3,200, the amount available for review becomes £6,150. That is an £850 increase. If October’s £5,300 had since been invoiced, finance would first update the billing register and only £850 would remain.
 
 ## Where AI earns its place
 
-I use AI to pick out quantities and amounts from the [seven fictional source records](evidence.json). I keep the [extracted figures beside the words they came from](interpretation.json) so I can check what each figure means. For instance, “120 metres” is a replacement ceiling, while “110 metres” in the diary is cumulative work completed. Neither grants authority to invoice.
+I use AI to pick out quantities and amounts from the [seven source records](evidence.json). I keep the [extracted figures beside the words they came from](interpretation.json) so I can check what each figure means. For instance, “120 metres” is a replacement ceiling, while “110 metres” in the diary is cumulative work completed. Neither grants authority to invoice.
 
-The Python replay checks citations, source types, missing records and the cut-off before applying the agreed arithmetic. A quotation can be authentic while a number extracted from it is wrong. The reviewer must check those numbers against the originals before relying on the result. The fixtures are illustrative and do not measure model accuracy on unseen documents.
+The Python replay checks citations, source types, missing records and the cut-off before applying the agreed arithmetic. A quotation can be authentic while a number extracted from it is wrong. The reviewer must check those numbers against the originals before relying on the result. I would test extraction accuracy on unseen documents before using this on a live job.
 
-**Client work I delivered.** I worked with the quantity surveyor and directors to reconcile project costs and explain differences in the management accounts. I use this fictional variation to show the distinction I look for at month end: what the site has measured and what the customer has certified.
+**Client work I delivered.** I worked with the quantity surveyor and directors to reconcile project costs and explain differences in the management accounts.
 
 **What you can run here.** From this folder, run `python review.py` and `python -m unittest -v` (Python 3.10+). The replay uses the saved extraction offline. Try changing the prior-billing record and its matching extraction to £8,500 and rerunning the November check. This example assumes one job, a retrospectively applicable revised rate, cumulative snapshots and one authorised source per record type. Finance owns release. Revenue recognition, VAT, retention and contractual entitlement require separate assessment.
 

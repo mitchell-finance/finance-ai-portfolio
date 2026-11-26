@@ -7,14 +7,17 @@ I help teams collect the right debts, find unbilled work and check systems befor
 
 For a £30m construction business, I led the accounting migration from Xero to Business Central and reconciled costs by project before go-live.
 
+I use sample records and figures throughout the walkthroughs so you can follow the decisions I describe.
+
 ## 1. Credit control before a customer call
 
 **“I’m calling this customer in ten minutes. Which invoices should I raise?”**
 
-For fictional customer Example Works Ltd:
+For Example Works Ltd:
 
 > **Raise DEMO-101: £1,200.00 overdue.**  
-> Records checked: 26 November 2026, 09:00 GMT — fictional snapshot.  
+> Records checked: 26 November 2026, 09:00 GMT.
+>
 > **Refer DEMO-102 (£800.00) to an office colleague:** the customer queried the agreed quantity. Check the signed job record with the account manager.  
 > Exclude paid, factored and not-yet-due invoices from the reminder.
 
@@ -24,7 +27,7 @@ After a £500.00 payment at 09:04, the 09:06 check **blocks the original draft**
 
 **Client work I delivered:** I built a Claude agent to read overdue Xero invoices, prepare a call list, separate factored accounts and draft Outlook chasers for finance review.
 
-**What you can run here:** tested Python rules with fictional records and checks for changed balances. No AI model or live connectors.
+**What you can run here:** tested Python rules that check for changed balances. No AI model or live connectors.
 
 **Possible extensions:** this customer view in Teams and Copilot Studio, proposed but not built or tested here.
 
