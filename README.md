@@ -5,7 +5,7 @@ Practical AI implementation · Finance transformation · Systems migration
 
 I help teams collect the right debts, find unbilled work and check systems before switching. I build the integrations and work with your staff, retaining human review for decisions affecting money or a customer.
 
-For a £30m construction business, I led the accounting migration from Xero to Business Central and reconciled costs by project before go-live.
+For a £30m construction business, I led the client-side finance migration from Xero to Business Central with 4PS as implementation partner. I reconciled costs by project and authorised finance cutover. Finance went live in the planned quarter, with around 50 system users across the business. [Read the migration case](demos/migration/README.md).
 
 I use sample records and figures throughout the walkthroughs so you can follow the decisions I describe.
 
@@ -21,7 +21,9 @@ I built a Claude workflow to prepare credit-control call lists from Xero and dra
 
 ## Working with a team
 
-For a utilities contractor, I ran an in-person workshop with four office staff and managers using a completed job. A colleague went on to cost jobs independently and I checked their figures. [Discuss a project with me](https://mitchellfinance.co.uk/).
+For a utilities contractor, I ran an in-person workshop with four office staff and managers using a completed job. A colleague went on to cost jobs independently and I checked their figures.
+
+For a credit-control pilot, I’d agree with finance which invoices can be chased, then test a call list against a recent ledger extract. I’d hand over the call list, draft reminders and a guide to the exceptions. To check the handover, a colleague would run a fresh extract and explain which invoices they’d hold and why. [Discuss a project with me](https://mitchellfinance.co.uk/).
 
 ## Find a problem your team recognises
 
