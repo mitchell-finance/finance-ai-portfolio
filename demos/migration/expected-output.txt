@@ -1,0 +1,9 @@
+Signed ledger total | closing 0.00 | opening 0.00 GBP
+Account 2100 | closing -3,000.00 | opening -3,000.00
+Account 5100 | closing 3,000.00 | opening 3,000.00
+HOLD | 5100 | North | opening less closing -300.00 GBP
+HOLD | 5100 | South | opening less closing +300.00 GBP
+Finance checks the fictional project register: N07 belongs to North. Correct comparison mapping.
+PASS | closing and opening agree by account and project.
+Sign-off record | project reconciliation passed | cutover pending other checks.
+Authorising role: client finance lead.

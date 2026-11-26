@@ -1,0 +1,61 @@
+{
+  "jobs": [
+    [
+      "J101",
+      "complete",
+      620
+    ],
+    [
+      "J102",
+      "complete",
+      480
+    ],
+    [
+      "J103",
+      "complete",
+      750
+    ],
+    [
+      "J104",
+      "complete",
+      900
+    ]
+  ],
+  "reports": [
+    {
+      "id": "S11",
+      "original": "J101",
+      "filed": "J101"
+    },
+    {
+      "id": "S13",
+      "original": "J103",
+      "filed": "J104"
+    },
+    {
+      "id": "S14",
+      "original": "J104",
+      "filed": "J104"
+    }
+  ],
+  "invoices": [
+    [
+      "D21",
+      "J101",
+      "DRAFT",
+      620
+    ],
+    [
+      "D23",
+      "J103",
+      "DRAFT",
+      750
+    ],
+    [
+      "I24",
+      "J104",
+      "AUTHORISED",
+      900
+    ]
+  ]
+}

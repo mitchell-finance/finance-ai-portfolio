@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-26T09:06:00+00:00",
+  "currency": "GBP",
+  "customers": [{"id": "CUSTOMER-001", "name": "Example Works Ltd"}],
+  "invoices": [
+    {"reference": "DEMO-101", "customer_id": "CUSTOMER-001", "due_date": "2026-11-14", "gross_pence": 120000, "received_pence": 50000, "status": "open", "last_payment_at": "2026-11-26T09:04:00+00:00"},
+    {"reference": "DEMO-102", "customer_id": "CUSTOMER-001", "due_date": "2026-11-10", "gross_pence": 80000, "received_pence": 0, "status": "disputed", "dispute_reason": "Customer queries the agreed quantity.", "dispute_action": "Office colleague checks the signed job record with the account manager."},
+    {"reference": "DEMO-103", "customer_id": "CUSTOMER-001", "due_date": "2026-11-12", "gross_pence": 60000, "received_pence": 60000, "status": "paid"},
+    {"reference": "DEMO-104", "customer_id": "CUSTOMER-001", "due_date": "2026-11-16", "gross_pence": 45000, "received_pence": 0, "status": "factored"},
+    {"reference": "DEMO-105", "customer_id": "CUSTOMER-001", "due_date": "2026-12-01", "gross_pence": 30000, "received_pence": 0, "status": "open"}
+  ]
+}

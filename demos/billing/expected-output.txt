@@ -1,0 +1,10 @@
+J101 | Ready for finance review | D21, GBP 620, supported by S11
+J102 | Hold | shift report missing
+J103 | Hold | conflicting job references on S13
+J104 | Already invoiced | skip billing
+Office checks signed report S13: original J103; filed under J104.
+After correction:
+J101 | Ready for finance review | D21, GBP 620, supported by S11
+J102 | Hold | shift report missing
+J103 | Ready for finance review | D23, GBP 750, supported by S13
+J104 | Already invoiced | skip billing

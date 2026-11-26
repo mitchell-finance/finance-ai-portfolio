@@ -1,0 +1,30 @@
+CREDIT CONTROL BEFORE A CUSTOMER CALL
+Fictional records | GBP | No live connection or email sending
+Customer: Example Works Ltd (CUSTOMER-001)
+Records checked: 26 Nov 2026, 09:00 UTC
+Demo freshness limit: 10 minutes; recheck before using a draft.
+Raise on the call: DEMO-101, £1,200.00
+
+DEMO-101 | £1,200.00 outstanding | RAISE ON CALL
+  Overdue since 14 Nov 2026.
+DEMO-102 | £800.00 outstanding | COLLEAGUE ACTION
+  Customer queries the agreed quantity. Office colleague checks the signed job record with the account manager.
+DEMO-103 | £0.00 outstanding | PAID
+  Nothing to request.
+DEMO-104 | £450.00 outstanding | FACTOR CHECK
+  Finance checks with the invoice-finance provider; no direct chaser.
+DEMO-105 | £300.00 outstanding | NOT OVERDUE
+  Due 01 Dec 2026; no overdue payment request.
+
+DRAFT FOR FINANCE REVIEW
+Hello, could you confirm when we can expect payment of £1,200.00 for invoice DEMO-101? Thank you.
+
+A PAYMENT ARRIVES AFTER THE FIRST REVIEW
+09:04 UTC: £500.00 received against DEMO-101.
+09:06 UTC: fictional records checked again.
+OLD DRAFT BLOCKED: Customer records changed. Replace the old draft and ask finance to review it.
+Revised amount to raise: £700.00
+REPLACEMENT DRAFT FOR FINANCE REVIEW
+Hello, could you confirm when we can expect payment of £700.00 for invoice DEMO-101? Thank you.
+Finance still checks the balance, reference and recipient before any reminder is sent.
+This example does not send messages or authorise sending.
