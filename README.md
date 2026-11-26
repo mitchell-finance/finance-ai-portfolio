@@ -19,6 +19,7 @@ I use sample records and figures throughout the walkthroughs so you can follow t
 | Automate routine work with human review | [Credit-control call list](demos/credit-control/README.md) · [AI extraction for month-end variations](demos/variation-review/README.md) |
 | Connect purchasing, receiving and accounts payable | [Aperture: approval revisions and corrected receipts](demos/aperture/README.md) |
 | Replace a period-end report with a decision about cash | [Can Friday’s supplier run be funded?](demos/cash-reporting/README.md) |
+| Explain a change to an issued board pack | [Trace an £8,400 late invoice to a £2,400 profit movement](demos/month-end/README.md) |
 | Forecast the cost of completing a job | [Programme delays, revised rates and accruals](demos/cost-to-complete/README.md) |
 | Review a commercial proposal or update a sales forecast | [Partial quote amendments](demos/proposal-review/amendments.md) · [Partial orders and repeated CRM events](demos/crm-review/order-events.md) |
 

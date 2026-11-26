@@ -1,0 +1,11 @@
+{
+  "pack": "October | issued 3 November",
+  "period_end": "2026-10-31",
+  "revenue_gbp": 180000,
+  "other_costs_gbp": 132000,
+  "accrual": {
+    "job": "J17",
+    "work_ref": "W8",
+    "gbp": 6000
+  }
+}
