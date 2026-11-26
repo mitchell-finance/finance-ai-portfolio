@@ -7,7 +7,7 @@
 | North | £1,800 | £1,500 | −£300 |
 | South | £1,200 | £1,500 | +£300 |
 
-The finance reviewer checks the project register and corrects N07 in the comparison mapping. The rerun gives North £1,800 and South £1,200. This sample fixes an interpretation of the opening export. An error in the posted ledger would need a correction there and a fresh export.
+I check the project register and correct N07 in the comparison mapping. The rerun gives North £1,800 and South £1,200. This sample fixes an interpretation of the opening export. An error in the posted ledger would need a correction there and a fresh export.
 
 **Illustrative sign-off record.** The closing and opening balances agree by account and project after correction. The client finance lead would authorise cutover once the other agreed tests pass. This single check clears the project reconciliation only.
 

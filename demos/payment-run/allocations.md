@@ -8,7 +8,7 @@
 | T02 · £1,000 | North | £1,000 against B09 | B09 belongs to South. |
 | T03 · £1,000 | South | £1,000 against A18 | A18 belongs to North. |
 
-Finance should correct the **allocation schedule**. In this fixture the cash totals by beneficiary already agree. Changing the bank amounts would introduce a new error. Allocate T02 to A18 and T03 to B09, then rerun all three checks.
+I would send the **allocation schedule** back for correction. In this fixture the cash totals by beneficiary already agree. Changing the bank amounts would introduce a new error. Allocate T02 to A18 and T03 to B09, then rerun all three checks.
 
 **Run the evidence.** From this directory run `python allocations.py` (status 1 means hold), then `python -m unittest -v test_allocations`. The [fictional fixture](allocation-case.json) contains the approved invoices, transfers and allocation rows in pence. The [Python and SQL](allocations.py) reconcile each invoice, each transfer and each relationship. The tests exercise the corrected schedule, missing allocations, duplicate rows and unknown references.
 

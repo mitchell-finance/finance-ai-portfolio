@@ -22,7 +22,7 @@ After a £500.00 payment at 09:04, the 09:06 check **blocks the original draft**
 
 [Worked example and draft →](demos/credit-control/README.md) · [Actual program output](demos/credit-control/expected-output.txt)
 
-**Client work I delivered:** a Claude agent reading overdue Xero invoices, preparing a call list, separating factored accounts and drafting Outlook chasers for finance review.
+**Client work I delivered:** I built a Claude agent to read overdue Xero invoices, prepare a call list, separate factored accounts and draft Outlook chasers for finance review.
 
 **What you can run here:** tested Python rules with fictional records and checks for changed balances. No AI model or live connectors.
 
@@ -50,7 +50,7 @@ I led the migration on the client side, with 4PS as implementation partner. I ch
 
 ## 5. Which variation value can finance support at month end?
 
-The site diary records 110 metres, but the October certificate covers only 100. A saved AI reading of the correspondence and a dated reconciliation show **£5,300** for finance review after prior billing. November’s approval adds £850. [Trace the figures back to the original words](demos/variation-review/README.md).
+The site diary records 110 metres, but the October certificate covers only 100. I compare the quantities in the correspondence with the signed certificate and deduct prior billing. That leaves **£5,300** for finance review. November’s approval adds £850. [Trace the figures back to the original words](demos/variation-review/README.md).
 
 ## How I work with your team
 

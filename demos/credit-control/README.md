@@ -46,7 +46,7 @@ The useful result is a clear next action with the exceptions visible. The person
 
 ## What you can run here
 
-This newly written Python example uses explicit rules and five fictional invoices. It groups the result by customer, explains each exclusion, prepares draft text and checks whether an earlier review still matches the latest supplied records.
+I use five fictional invoices to show the rules behind my call list. It groups the result by customer, explains each exclusion, prepares draft text and checks whether an earlier review still matches the latest supplied records.
 
 It runs locally with **Python 3.10 or later** and the standard library. No installation of packages, credentials or network connection is needed. From the repository folder:
 

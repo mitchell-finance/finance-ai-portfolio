@@ -9,7 +9,7 @@
 
 Both errors are for the same amount. Counting rows or adding up the pounds gives finance false reassurance. I compare each supplier, invoice and amount, including the number of times that combination appears. The order of the file can change.
 
-**Client work I delivered.** During a finance migration I checked a bank export against the approved payment count and value. This fictional example explores a further check for offsetting errors.
+**Client work I delivered.** During a finance migration I checked a bank export against the approved payment count and value. Here I take that check a step further with a fictional run where two errors cancel each other out.
 
 **What you can run here.** In this directory, run `python check.py` to compare the [approved run](approved.csv) and [fictional export](bank-export.csv). The program prints both differences and exits with status 1 for a hold. To try the correction yourself, copy the export, replace the second SUP-01 / INV-101 with SUP-02 / INV-102, retain the amount, and run `python check.py --export corrected.csv`. A match exits with status 0. Invalid input exits with status 2. Run `python -m unittest -v` for the checks. [See both runs](expected-output.txt).
 
