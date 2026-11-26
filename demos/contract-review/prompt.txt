@@ -1,0 +1,10 @@
+For each case select the GBP hourly rate for the stated phase and work date under the fictional desk policy. Consider only mutually signed terms effective for that work. Apply an explicit replacement only within its stated scope. Refer unresolved conflicts or unclear applicability; never guess. A draft alone cannot set a rate. Cite the IDs of the governing clauses or the evidence requiring referral. Return only a JSON array with one object per case, fields case, rate (integer or null on referral), evidence (list of IDs). No tools.
+
+A. Survey, 12 May. A1: Both parties signed. Survey hours are GBP 68 from 1 April. A2: Draft awaiting supplier signature. Survey hours rise to GBP 74 on 1 May.
+B. Installation, 12 May. B1: Signed by both. All phases GBP 70 from 1 April. B2: Both signed. For installation only replace B1 with GBP 83 effective 10 May.
+C. Survey, 12 May. C1: Signed by both. Survey hours are GBP 69 from 1 April. C2: Both signed. Installation alone changes to GBP 84 on 10 May.
+D. Installation, 9 May. D1: Both signed. Installation GBP 71 from 1 April. D2: Both signed on 3 May. Replace installation rate with GBP 90 for work from 10 May.
+E. Testing, 15 May. E1: Both signed. Testing GBP 80 from 1 May. E2: Both signed. Testing GBP 86 from 1 May. Neither sets priority or mentions the other.
+F. Design, 1 June. F1: Supplier quotation only. Design GBP 92 per hour. F2: Buyer email. We will take this to committee next week.
+G. Commissioning, 10 June. G1: Both signed. Commissioning GBP 73 from 1 April. G2: Both signed. Replace G1 with GBP 89 on site handover. G3: Site register. Handover date has not been recorded.
+H. Phase 2 fitting, 1 June. H1: Both signed. Phase 2 fitting GBP 82 from 1 May. H2: Both signed. Replace H1 with GBP 88 for work on or after 1 June. H3: Unsigned cost plan assumes GBP 93.

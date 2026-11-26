@@ -1,5 +1,6 @@
 """Replay one fictional cumulative variation. Values are whole metres and net GBP."""
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -30,6 +31,10 @@ def assess(documents, claims, cutoff):
             raise ValueError(f"Source cannot support these fields: {ref}")
         if any(type(v) is not int or v < 0 for v in fields.values()):
             raise ValueError(f"Check units or values: {ref}")
+        if source == "instruction":
+            rates = re.findall(r"£([0-9]+) per metre\b", doc["text"])
+            if len(rates) != 1 or int(rates[0]) != fields["rate_gbp"]:
+                raise ValueError(f"{ref}: verify the extracted rate against the instruction")
         day = date.fromisoformat(doc["date"])
         if day <= cutoff:
             key = (source, day)

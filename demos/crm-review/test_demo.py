@@ -19,6 +19,11 @@ class CRMChecks(unittest.TestCase):
             self.case["order_register"] = [{"opportunity":opportunity,"verified":verified,"reference":"P-5"}]
             self.assertEqual(review(self.case)["decision"].startswith("Review"), allowed)
 
+    def test_internal_note_cannot_be_attributed_to_buyer(self):
+        self.case["candidate"]["stage_evidence"] = "N2"
+        with self.assertRaisesRegex(ValueError, "buyer"):
+            review(self.case)
+
     def test_wrong_task_owner_blocks_update(self):
         self.case["candidate"]["owner"] = "Buyer"
         with self.assertRaises(ValueError):

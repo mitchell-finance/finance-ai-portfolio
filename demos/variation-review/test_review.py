@@ -16,6 +16,11 @@ class VariationTests(unittest.TestCase):
         self.assertNotIn("I1", self.check()[2])
         self.assertNotIn("C2", self.check()[2])
 
+    def test_genuine_quote_with_wrong_extracted_rate(self):
+        self.claims[1]["fields"]["rate_gbp"] = 95
+        with self.assertRaisesRegex(ValueError, "I2: verify the extracted rate"):
+            self.check()
+
     def test_site_email_cannot_certify(self):
         self.claims.append({"id":"E1","quote":"All 110 metres look fine to me.",
                             "fields":{"certified_m":110}})

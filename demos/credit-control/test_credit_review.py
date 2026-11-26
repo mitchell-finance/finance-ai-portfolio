@@ -22,6 +22,21 @@ class CreditReviewTests(unittest.TestCase):
         return review_customer(self.first if snapshot is None else snapshot,
                                self.customer, self.now if now is None else now, **kwargs)
 
+    def test_render_uses_changed_references_amounts_and_second_snapshot(self):
+        from contextlib import redirect_stdout
+        from io import StringIO
+        from credit_review import render
+        for snapshot in (self.first, self.after):
+            snapshot["invoices"][0]["reference"] = "ALT-17"
+            snapshot["invoices"][4]["due_date"] = "2026-11-01"
+        self.after["invoices"][0]["received_pence"] = 30000
+        output = StringIO()
+        with redirect_stdout(output):
+            render(self.first, self.after, self.customer)
+        self.assertIn("ALT-17, DEMO-105, £1,500.00", output.getvalue())
+        self.assertIn("ALT-17: allocated receipts increased by £300.00", output.getvalue())
+        self.assertNotIn("DEMO-101", output.getvalue())
+
     def test_only_unrestricted_overdue_amount_enters_draft(self):
         review = self.review()
         self.assertEqual(review.amount_to_raise_pence, 120000)

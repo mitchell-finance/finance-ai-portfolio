@@ -186,33 +186,47 @@ def main():
     folder = Path(__file__).resolve().parent / "data"
     first = load_snapshot(folder / "first-review.json")
     after = load_snapshot(folder / "after-payment.json")
-    first_time = datetime.fromisoformat("2026-11-26T09:00:00+00:00")
-    later_time = datetime.fromisoformat("2026-11-26T09:06:00+00:00")
-    review = review_customer(first, "CUSTOMER-001", first_time)
+    render(first, after, "CUSTOMER-001")
+
+
+def render(first, after, customer_id):
+    first_time = _timestamp(first["checked_at"], "checked_at")
+    later_time = _timestamp(after["checked_at"], "checked_at")
+    review = review_customer(first, customer_id, first_time)
+    refreshed = review_customer(after, customer_id, later_time)
     print("CREDIT CONTROL BEFORE A CUSTOMER CALL")
     print("Fictional records | GBP | No live connection or email sending")
     print(f"Customer: {review.customer_name} ({review.customer_id})")
-    print(f"Records checked: {review.checked_at:%d %b %Y, %H:%M UTC}")
+    print(f"Records checked: {review.checked_at.astimezone(timezone.utc):%d %b %Y, %H:%M UTC}")
     print("Demo freshness limit: 10 minutes; recheck before using a draft.")
-    print(f"Raise on the call: DEMO-101, {money(review.amount_to_raise_pence)}")
+    refs = [d.reference for d in review.decisions if d.action == "RAISE ON CALL"]
+    print(f"Raise on the call: {', '.join(refs) or 'none'}, {money(review.amount_to_raise_pence)}")
     print()
     for decision in review.decisions:
         print(f"{decision.reference} | {money(decision.outstanding_pence)} outstanding | {decision.action}")
         print(f"  {decision.explanation}")
     print("\nDRAFT FOR FINANCE REVIEW")
-    print(review.draft)
-    print("\nA PAYMENT ARRIVES AFTER THE FIRST REVIEW")
-    print("09:04 UTC: £500.00 received against DEMO-101.")
-    print("09:06 UTC: fictional records checked again.")
+    print(review.draft or "No reminder required.")
+    print("\nRECHECK BEFORE FINANCE REVIEW")
+    prior = {row["reference"]: row["received_pence"] for row in first["invoices"]
+             if row["customer_id"] == customer_id}
+    for row in after["invoices"]:
+        ref = row["reference"]
+        if row["customer_id"] == customer_id and ref in prior:
+            change = row["received_pence"] - prior[ref]
+            if change > 0:
+                print(f"{ref}: allocated receipts increased by {money(change)}.")
+    print(f"Records checked again: {later_time.astimezone(timezone.utc):%d %b %Y, %H:%M UTC}")
     try:
         assert_current(review, after, later_time)
     except ReviewBlocked as exc:
         print(f"OLD DRAFT BLOCKED: {exc}")
-    refreshed = review_customer(after, "CUSTOMER-001", later_time)
+    else:
+        print("Earlier review still matches.")
     assert_current(refreshed, after, later_time)
     print(f"Revised amount to raise: {money(refreshed.amount_to_raise_pence)}")
-    print("REPLACEMENT DRAFT FOR FINANCE REVIEW")
-    print(refreshed.draft)
+    print("CURRENT DRAFT FOR FINANCE REVIEW")
+    print(refreshed.draft or "No reminder required.")
     print("Finance still checks the balance, reference and recipient before any reminder is sent.")
     print("This example does not send messages or authorise sending.")
 

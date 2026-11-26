@@ -18,7 +18,7 @@ The £3,200 is an amount already invoiced. Deducting the first 40 metres at toda
 
 I use AI to pick out quantities and amounts from the [seven source records](evidence.json). I keep the [extracted figures beside the words they came from](interpretation.json) so I can check what each figure means. For instance, “120 metres” is a replacement ceiling, while “110 metres” in the diary is cumulative work completed. Neither grants authority to invoice.
 
-The Python replay checks citations, source types, missing records and the cut-off before applying the agreed arithmetic. A quotation can be authentic while a number extracted from it is wrong. The reviewer must check those numbers against the originals before relying on the result. I would test extraction accuracy on unseen documents before using this on a live job.
+The Python replay checks citations, source types, missing records and the cut-off before applying the agreed arithmetic. A quotation can be authentic while a number extracted from it is wrong. If I change the saved I2 rate from £85 to £95 while keeping its genuine quotation, October would be overstated by £1,000. Run the wrong-rate test to see the replay stop at I2 before producing a value. The check recognises the single whole-pound “£85 per metre” wording in these instructions. Other terms and units need a reviewer. I would test extraction accuracy on unseen documents before using this on a live job.
 
 **Client work I delivered.** I worked with the quantity surveyor and directors to reconcile project costs and explain differences in the management accounts.
 

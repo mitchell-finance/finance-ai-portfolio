@@ -10,6 +10,8 @@ def review(case):
     proposal = case["candidate"]
     stage_note = notes[proposal["stage_evidence"]]
     action_note = notes[proposal["action_evidence"]]
+    if stage_note["speaker"] != "Buyer":
+        raise ValueError("Stage evidence must cite the buyer")
     if proposal["owner"] != action_note["speaker"]:
         raise ValueError("Action owner differs from the cited speaker")
     if proposal["stage"] != "Won":

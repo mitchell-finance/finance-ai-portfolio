@@ -19,12 +19,12 @@ DEMO-105 | £300.00 outstanding | NOT OVERDUE
 DRAFT FOR FINANCE REVIEW
 Hello, could you confirm when we can expect payment of £1,200.00 for invoice DEMO-101? Thank you.
 
-A PAYMENT ARRIVES AFTER THE FIRST REVIEW
-09:04 UTC: £500.00 received against DEMO-101.
-09:06 UTC: fictional records checked again.
+RECHECK BEFORE FINANCE REVIEW
+DEMO-101: allocated receipts increased by £500.00.
+Records checked again: 26 Nov 2026, 09:06 UTC
 OLD DRAFT BLOCKED: Customer records changed. Replace the old draft and ask finance to review it.
 Revised amount to raise: £700.00
-REPLACEMENT DRAFT FOR FINANCE REVIEW
+CURRENT DRAFT FOR FINANCE REVIEW
 Hello, could you confirm when we can expect payment of £700.00 for invoice DEMO-101? Thank you.
 Finance still checks the balance, reference and recipient before any reminder is sent.
 This example does not send messages or authorise sending.
