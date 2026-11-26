@@ -36,6 +36,8 @@ For a utilities contractor, I ran an in-person workshop with four office staff a
 
 ## Run the examples
 
+On 26 November 2026 I ran the full suite on Windows with Python 3.13.14. All 68 tests passed across the 13 demos. [Code I tested](https://github.com/mitchell-finance/finance-ai-portfolio/tree/c035b71637c56c12ae8d459858be86ac6c214c7b).
+
 From the repository folder, use Python 3.10 or later. The checks run offline with the standard library.
 
 ```sh
