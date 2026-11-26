@@ -44,6 +44,10 @@ In a separate independent assignment alongside my Finance Director role, I led t
 
 **Worked result:** Account 5100 agrees at £3,000, but North is £300 short and South £300 high. Hold sign-off until the project mapping is corrected and the check rerun. [Inspect the reconciliation and sign-off](demos/migration/README.md).
 
+## 4. The payment count and value agree. Would you release the file?
+
+**Hold the £42,600 run.** One £2,400 invoice is in the bank file twice and another supplier’s £2,400 invoice is missing. Both lists still contain 18 payments. [Inspect the two exceptions and rerun the check](demos/payment-run/README.md).
+
 ## How I work with your team
 
 We start with a real task. For a utilities contractor, I ran an in-person workshop for four office staff and managers using a completed job. A colleague subsequently costed jobs independently and I checked their figures.

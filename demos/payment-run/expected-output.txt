@@ -1,0 +1,9 @@
+Approved: 18 payments | GBP 42,600.00
+Bank file: 18 payments | GBP 42,600.00
+Missing: 1 x SUP-02 / INV-102 / GBP 2,400.00
+Excess: 1 x SUP-01 / INV-101 / GBP 2,400.00
+HOLD | Regenerate the file and compare again before release.
+
+Approved: 18 payments | GBP 42,600.00
+Bank file: 18 payments | GBP 42,600.00
+MATCH | Line comparison passed. Finance retains payment authority.
