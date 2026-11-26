@@ -5,7 +5,7 @@ Practical AI implementation · Finance transformation · Systems migration
 
 I help teams collect the right debts, find unbilled work and check systems before switching. I build the integrations and work with your staff, retaining human review for decisions affecting money or a customer.
 
-As Finance Director at a construction business turning over approximately £30m, I led a company-wide AI rollout.
+For a £30m construction business, I led the accounting migration from Xero to Business Central and reconciled costs by project before go-live.
 
 ## 1. Credit control before a customer call
 
