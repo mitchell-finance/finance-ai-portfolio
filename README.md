@@ -9,7 +9,21 @@ For a £30m construction business, I led the accounting migration from Xero to B
 
 I use sample records and figures throughout the walkthroughs so you can follow the decisions I describe.
 
+## Find a problem your team recognises
+
+| If you need to… | Start here |
+| --- | --- |
+| Switch finance systems and trust the opening balances | [Migration sign-off](demos/migration/README.md) · [Trace split postings](demos/migration/lineage.md) |
+| Clean supplier data before migration or integration | [Duplicate names, conflicting identifiers and bank changes](demos/data-cleaning/README.md) |
+| Reconcile finance and operational records | [Unbilled jobs](demos/billing/README.md) · [Split payment allocations](demos/payment-run/allocations.md) |
+| Automate routine work with human review | [Credit-control call list](demos/credit-control/README.md) · [AI extraction for month-end variations](demos/variation-review/README.md) |
+| Connect purchasing, receiving and accounts payable | [Aperture: approval revisions and corrected receipts](demos/aperture/README.md) |
+| Replace a period-end report with a decision about cash | [Can Friday’s supplier run be funded?](demos/cash-reporting/README.md) |
+| Forecast the cost of completing a job | [Programme delays, revised rates and accruals](demos/cost-to-complete/README.md) |
+| Review a commercial proposal or update a sales forecast | [Partial quote amendments](demos/proposal-review/amendments.md) · [Partial orders and repeated CRM events](demos/crm-review/order-events.md) |
+
 ## 1. Credit control before a customer call
+
 
 **“I’m calling this customer in ten minutes. Which invoices should I raise?”**
 
