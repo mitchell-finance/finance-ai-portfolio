@@ -1,0 +1,11 @@
+Signed ledger: 0 differences
+account: 0 differences
+project: 0 differences
+account x project: 4 differences
+  Labour / North: -30025 pence
+  Labour / South: +30025 pence
+  Materials / North: +30025 pence
+  Materials / South: -30025 pence
+HOLD B02 (X01): 30025 pence in Labour/South; source shows Labour/North
+HOLD B06 (X04): 30025 pence in Materials/North; source shows Materials/South
+Corrected replay: all four totals checks and source-line checks agree.

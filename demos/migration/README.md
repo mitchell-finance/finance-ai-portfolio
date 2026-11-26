@@ -20,3 +20,5 @@ I check the project register and correct N07 in the comparison mapping. The reru
 **Possible extensions.** A separate bank-export check could compare the payment count and value to the approved run before anyone releases the file.
 
 [Back to the portfolio](../../README.md)
+
+**A harder cutover decision:** [Both project margins agree. Can I trust the labour and materials figures?](lineage.md) Follow two split postings through four offsetting differences and test their source references.

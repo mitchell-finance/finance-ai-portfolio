@@ -47,6 +47,8 @@ I led the migration on the client side, with 4PS as implementation partner. I ch
 
 **Worked result:** Account 5100 agrees at £3,000, but North is £300 short and South £300 high. Hold sign-off until the project mapping is corrected and the check rerun. [Inspect the reconciliation and sign-off](demos/migration/README.md).
 
+[Try the harder migration check](demos/migration/lineage.md): each project total agrees, yet two split postings misstate labour and materials.
+
 ## 4. The payment count and value agree. Would you release the file?
 
 **Hold the £42,600 run.** One £2,400 invoice is in the bank file twice and another supplier’s £2,400 invoice is missing. Both lists still contain 18 payments. [Inspect the two exceptions and rerun the check](demos/payment-run/README.md).

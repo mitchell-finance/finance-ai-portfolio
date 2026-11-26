@@ -1,0 +1,8 @@
+line_id,source_id,account,project,pence
+B01,X01,Labour,North,105000
+B02,X01,Labour,South,30025
+B03,X02,Materials,North,80000
+B04,X03,Labour,South,95000
+B05,X04,Materials,South,130000
+B06,X04,Materials,North,30025
+B07,X05,Creditors,Central,-470050

@@ -1,0 +1,6 @@
+source_id,account,project,pence
+X01,Labour,North,135025
+X02,Materials,North,80000
+X03,Labour,South,95000
+X04,Materials,South,160025
+X05,Creditors,Central,-470050
