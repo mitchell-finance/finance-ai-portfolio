@@ -1,0 +1,6 @@
+Bank receipt only | invoices £4,800.00 | unapplied £2,400.00 | net £2,400.00
+Hold invoice-specific chaser. Ask for remittance advice.
+Remittance received | invoices £2,400.00 | unapplied £0.00 | net £2,400.00
+Hello, could you confirm when we can expect payment of £2,400.00 for invoice INV-B? Thank you.
+Duplicate remittance | invoices £2,400.00 | unapplied £0.00 | net £2,400.00
+Hello, could you confirm when we can expect payment of £2,400.00 for invoice INV-B? Thank you.

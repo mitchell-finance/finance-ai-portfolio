@@ -43,7 +43,7 @@ For a credit-control pilot, I’d agree with finance which invoices can be chase
 
 ## Run the examples
 
-On 26 November 2026 I ran all 85 tests across 14 demos on Windows using Python 3.10.11 and 3.13.14. [Run the same checks](run_tests.py).
+On 27 November 2026 I ran all 89 tests across 14 demos on Windows using Python 3.10.11 and 3.13.14. [Run the same checks](run_tests.py).
 
 From the repository folder, use Python 3.10 or later. The checks run offline with the standard library.
 

@@ -1,0 +1,13 @@
+{
+  "snapshot": {
+    "checked_at": "2026-11-27T09:00:00+00:00",
+    "currency": "GBP",
+    "customers": [{"id":"DEMO","name":"Example Fabrication Ltd"}],
+    "invoices": [
+      {"reference":"INV-A","customer_id":"DEMO","due_date":"2026-11-10","gross_pence":240000,"received_pence":0,"status":"open"},
+      {"reference":"INV-B","customer_id":"DEMO","due_date":"2026-11-11","gross_pence":240000,"received_pence":0,"status":"open"}
+    ]
+  },
+  "receipt":{"reference":"BANK-17","customer_id":"DEMO","pence":240000},
+  "advice":{"receipt":"BANK-17","customer_id":"DEMO","invoice":"INV-A"}
+}

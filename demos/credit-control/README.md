@@ -38,6 +38,18 @@ This is the practical control: a draft based on an earlier balance cannot pass t
 
 **[Read the actual output, including both drafts →](expected-output.txt)**
 
+## A customer pays £2,400. Which invoice can I chase?
+
+I used two fictional overdue invoices for £2,400 each. The bank receipt identifies the customer but gives no invoice reference. Both invoices are still open, so I ask for remittance advice before naming either invoice in a chaser.
+
+| Evidence available | Open invoices | Unapplied cash | Net outstanding | Call list |
+| --- | ---: | ---: | ---: | --- |
+| Bank receipt only | £4,800 | £2,400 | £2,400 | Hold both references |
+| Remittance names INV-A | £2,400 | £0 | £2,400 | INV-B only |
+| Same remittance arrives again | £2,400 | £0 | £2,400 | INV-B only |
+
+From this folder, run `python unapplied.py` to see all three decisions. The replay starts from the same pre-allocation snapshot each time. It covers one receipt settling one invoice in full. Conflicting instructions require finance review. [Sample records](data/unapplied-receipt.json) · [Actual output and draft](unapplied-output.txt) · [Regression tests](test_unapplied.py)
+
 ## Client work I delivered
 
 I built a Claude credit-control agent that reads overdue invoices from Xero, prepares a call list, separates factored accounts and drafts chasers in Outlook for finance to review. I led a company-wide AI rollout for a construction business turning over about £30m.
@@ -71,7 +83,7 @@ Only a positive overdue balance on an open, undisputed, unfactored invoice can e
 
 The demo rejects future timestamps and snapshots more than ten minutes old relative to the supplied review time. Ten minutes is an illustrative setting, not a production service commitment. A timestamp in a file is not proof that a live ledger was refreshed.
 
-The repeat check works against the latest snapshot supplied to it. It cannot discover a payment missing from that snapshot. There is no bank reconciliation, Xero connection, AI model, recipient lookup, Outlook draft creation or sending function here. Credit notes, unallocated receipts, multiple currencies and live factoring arrangements would need additional handling before real use.
+The repeat check works against the latest snapshot supplied to it. It cannot discover a payment missing from that snapshot. There is no bank reconciliation, Xero connection, AI model, recipient lookup, Outlook draft creation or sending function here. Credit notes, receipts split across several invoices, multiple currencies and live factoring arrangements would need additional handling before real use.
 
 ## Possible extensions
 
